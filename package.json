@@ -21,6 +21,10 @@
     "chai": "*"
   },
   "keywords": [
+    "require",
+    "folder",
+    "tree",
+    "all"
   ],
   "scripts": {
     "test": "make test"
