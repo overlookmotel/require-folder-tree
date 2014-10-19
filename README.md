@@ -75,14 +75,26 @@ Defaults to `false`.
 ### flattenPrefix
 
 Controls how the object keys are created for files nested in folders when flattening.
-`true` concatenates the folder name and file name, using camelcase.
-Any other value concatenates folder name and file name with the value inserted in between.
+`true` concatenates the folder name and file name.
 Defaults to `false`
 
 	requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: true });
+	// returns { a: ..., b: ..., cd: ..., ce: ... }
+
+### flattenCamel
+
+When `true`, camel-cases the model when concatenating the folder name and file name.
+Defaults to `false`
+
+	requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: true, flattenCamel: true });
 	// returns { a: ..., b: ..., cD: ..., cE: ... }
-	
-	requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: '_' });
+
+### flattenSeparator
+
+Sets separator between folder name and file name when concatenating.
+Defaults to `undefined`.
+
+	requireFolderTree('/path/to/folder', { flattenPrefix: true, flattenSeparator: '_' });
 	// returns { a: ..., b: ..., c_d: ..., c_e: ... }
 
 ### indexFile
@@ -121,6 +133,10 @@ Use `npm test` to run the tests.
 ## Changelog
 
 See changelog.md
+
+## TODO
+
+* Alter `flattenPrefix` behaviour
 
 ## Issues
 
