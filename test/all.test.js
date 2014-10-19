@@ -130,8 +130,19 @@ describe('flatten option', function() {
 		});
 	});
 	
-	it('flattens tree with camelcase prefixing', function() {
+	it('flattens tree with prefixing', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: true});
+		
+		expect(tree).to.deep.equal({
+			f: 6,
+			g: 7,
+			hi: 9,
+			hj: 10
+		});
+	});
+	
+	it('flattens tree with camelcase prefixing', function() {
+		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: true, flattenCamel: true});
 		
 		expect(tree).to.deep.equal({
 			f: 6,
@@ -141,8 +152,8 @@ describe('flatten option', function() {
 		});
 	});
 	
-	it('flattens tree with _ prefixing', function() {
-		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: '_'});
+	it('flattens tree with separator prefixing', function() {
+		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: true, flattenSeparator: '_'});
 		
 		expect(tree).to.deep.equal({
 			f: 6,
