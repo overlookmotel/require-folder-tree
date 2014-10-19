@@ -7,3 +7,7 @@
 ## 1.0.1
 
 * Changed API for flattening folder structures
+
+## 1.0.2
+
+* package.json keywords
