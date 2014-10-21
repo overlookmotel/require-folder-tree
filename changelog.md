@@ -11,3 +11,7 @@
 ## 1.0.2
 
 * package.json keywords
+
+## 1.0.3
+
+* Refactor cloning folders and files
