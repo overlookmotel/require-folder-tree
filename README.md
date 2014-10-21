@@ -134,10 +134,6 @@ Use `npm test` to run the tests.
 
 See changelog.md
 
-## TODO
-
-* Alter `flattenPrefix` behaviour
-
 ## Issues
 
 If you discover a bug, please raise an issue on Github. https://github.com/overlookmotel/require-folder-tree/issues
