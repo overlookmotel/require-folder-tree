@@ -15,3 +15,8 @@
 ## 1.0.3
 
 * Refactor cloning folders and files
+
+## 1.0.4
+
+* Minor code tidy
+* Added licenses to package.json
