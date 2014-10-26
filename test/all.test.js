@@ -10,7 +10,6 @@ var chai = require('chai'),
 	requireFolderTree = require('../lib/');
 
 // init
-
 chai.config.includeStack = true;
 
 // tests
