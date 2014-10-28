@@ -20,3 +20,10 @@
 
 * Minor code tidy
 * Added licenses to package.json
+
+## 1.0.5
+
+* Minor code tidy
+* Set versions for mocha & chai dev dependencies
+* JSHint as part of tests
+* Travis integration
