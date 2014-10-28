@@ -4,6 +4,9 @@
 
 ## Current status
 
+[![Build Status](https://secure.travis-ci.org/overlookmotel/require-folder-tree.png)](http://travis-ci.org/overlookmotel/require-folder-tree)
+[![Dependency Status](https://david-dm.org/overlookmotel/require-folder-tree.png)](https://david-dm.org/overlookmotel/require-folder-tree)
+
 API is stable and tests cover all options. No known issues.
 
 ## Basic usage
