@@ -12,9 +12,12 @@ teaser:
 
 test:
 	@if [ "$$GREP" ]; then \
-		make teaser && ./node_modules/mocha/bin/mocha --check-leaks --colors -t 10000 --reporter $(REPORTER) -g "$$GREP" $(TESTS); \
+		make jshint && make teaser && ./node_modules/mocha/bin/mocha --check-leaks --colors -t 10000 --reporter $(REPORTER) -g "$$GREP" $(TESTS); \
 	else \
-		make teaser && ./node_modules/mocha/bin/mocha --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS); \
+		make jshint && make teaser && ./node_modules/mocha/bin/mocha --check-leaks --colors -t 10000 --reporter $(REPORTER) $(TESTS); \
 	fi
+
+jshint:
+	./node_modules/.bin/jshint lib
 
 .PHONY: test

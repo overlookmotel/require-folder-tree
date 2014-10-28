@@ -18,7 +18,8 @@
   },
   "devDependencies": {
     "mocha": "2.0.x",
-    "chai": "1.9.x"
+    "chai": "1.9.x",
+	"jshint": "2.5.x"
   },
   "keywords": [
     "require",
