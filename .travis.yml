@@ -1,0 +1,15 @@
+script:
+  - "make test"
+
+language: node_js
+
+node_js:
+  - "0.10"
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
