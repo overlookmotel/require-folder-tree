@@ -27,3 +27,7 @@
 * Set versions for mocha & chai dev dependencies
 * JSHint as part of tests
 * Travis integration
+
+## 1.0.6
+
+* Build and dependencies status badges in README
