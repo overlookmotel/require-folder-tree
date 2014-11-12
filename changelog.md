@@ -31,3 +31,7 @@
 ## 1.0.6
 
 * Build and dependencies status badges in README
+
+## Next
+
+* Code tidy
