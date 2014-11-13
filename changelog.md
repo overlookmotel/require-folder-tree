@@ -35,3 +35,4 @@
 ## Next
 
 * Code tidy
+* Added `editorconfig` file
