@@ -32,7 +32,7 @@
 
 * Build and dependencies status badges in README
 
-## Next
+## 1.0.7
 
 * Code tidy
 * Added `editorconfig` file
