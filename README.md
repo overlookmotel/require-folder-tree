@@ -86,7 +86,7 @@ Defaults to `false`
 
 ### flattenCamel
 
-When `true`, camel-cases the model when concatenating the folder name and file name.
+When `true`, camel-cases the keys when concatenating the folder name and file name.
 Defaults to `false`
 
 	requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: true, flattenCamel: true });
@@ -97,7 +97,7 @@ Defaults to `false`
 Sets separator between folder name and file name when concatenating.
 Defaults to `undefined`.
 
-	requireFolderTree('/path/to/folder', { flattenPrefix: true, flattenSeparator: '_' });
+	requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: true, flattenSeparator: '_' });
 	// returns { a: ..., b: ..., c_d: ..., c_e: ... }
 
 ### indexFile
@@ -115,7 +115,7 @@ Defaults to `undefined`.
 
 ### foldersKey
 
-If set, puts all retrieved sub-folders inside the key specified
+If set, puts all retrieved sub-folders inside the key specified.
 Defaults to `undefined`.
 
 	requireFolderTree('/path/to/folder', { foldersKey: 'folders' });
@@ -123,7 +123,7 @@ Defaults to `undefined`.
 
 ### filesKey
 
-If set, puts all retrieved files inside the key specified
+If set, puts all retrieved files inside the key specified.
 Defaults to `undefined`.
 
 	requireFolderTree('/path/to/folder', { filesKey: 'files' });

@@ -36,3 +36,7 @@
 
 * Code tidy
 * Added `editorconfig` file
+
+## Next
+
+* Fix typos in README
