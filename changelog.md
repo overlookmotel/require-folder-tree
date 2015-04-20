@@ -42,5 +42,6 @@
 * fileNameTransform/folderNameTransform options
 * Fix typos in README
 * Code tidy
+* Travis runs on new container infrastructure
 * Remove all trailing whitespace
 * README code examples tagged as Javascript
