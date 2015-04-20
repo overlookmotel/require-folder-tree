@@ -40,4 +40,5 @@
 ## Next
 
 * Fix typos in README
+* Code tidy
 * Remove all trailing whitespace
