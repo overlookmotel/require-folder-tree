@@ -19,7 +19,7 @@ var path = pathModule.join(__dirname, '../testExample');
 describe('default', function() {
 	it('reads whole tree', function() {
 		var tree = requireFolderTree(path);
-	
+
 		expect(tree).to.deep.equal({
 			_index: {
 				_files: {
@@ -49,7 +49,7 @@ describe('default', function() {
 describe('filters', function() {
 	it('uses file filter option', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/});
-	
+
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7,
@@ -62,7 +62,7 @@ describe('filters', function() {
 
 	it('uses folder filter option', function() {
 		var tree = requireFolderTree(path, {filterFolders: /^([^h].*)$/});
-	
+
 		expect(tree).to.deep.equal({
 			_index: {
 				_files: {
@@ -85,7 +85,7 @@ describe('filters', function() {
 describe('options', function() {
 	it('uses recurse option', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, recurse: false});
-	
+
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7
@@ -94,7 +94,7 @@ describe('options', function() {
 
 	it('uses indexFile option', function() {
 		var tree = requireFolderTree(path, {indexFile: '_index.js'});
-	
+
 		expect(tree).to.deep.equal({
 			_files: {
 				c: 3
@@ -120,7 +120,7 @@ describe('options', function() {
 describe('flatten option', function() {
 	it('flattens tree', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true});
-		
+
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7,
@@ -128,10 +128,10 @@ describe('flatten option', function() {
 			j: 10
 		});
 	});
-	
+
 	it('flattens tree with prefixing', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: true});
-		
+
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7,
@@ -139,10 +139,10 @@ describe('flatten option', function() {
 			hj: 10
 		});
 	});
-	
+
 	it('flattens tree with camelcase prefixing', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: true, flattenCamel: true});
-		
+
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7,
@@ -150,10 +150,10 @@ describe('flatten option', function() {
 			hJ: 10
 		});
 	});
-	
+
 	it('flattens tree with separator prefixing', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true, flattenPrefix: true, flattenSeparator: '_'});
-		
+
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7,
@@ -166,7 +166,7 @@ describe('flatten option', function() {
 describe('foldersKey option', function() {
 	it('puts folders in own object key', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, foldersKey: '_folders'});
-		
+
 		expect(tree).to.deep.equal({
 			_folders: {
 				h: {
@@ -178,10 +178,10 @@ describe('foldersKey option', function() {
 			g: 7
 		});
 	});
-	
+
 	it('adds to existing object key', function() {
 		var tree = requireFolderTree(path, {indexFile: '_index.js', foldersKey: '_folders'});
-		
+
 		expect(tree).to.deep.equal({
 			_files: {
 				c: 3
@@ -207,7 +207,7 @@ describe('foldersKey option', function() {
 describe('filesKey option', function() {
 	it('puts files in own object key', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, filesKey: '_files'});
-		
+
 		expect(tree).to.deep.equal({
 			_files: {
 				f: 6,
@@ -221,10 +221,10 @@ describe('filesKey option', function() {
 			}
 		});
 	});
-	
+
 	it('adds to existing object key', function() {
 		var tree = requireFolderTree(path, {indexFile: '_index.js', filesKey: '_files'});
-		
+
 		expect(tree).to.deep.equal({
 			_files: {
 				c: 3,
