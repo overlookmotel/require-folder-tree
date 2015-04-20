@@ -43,3 +43,4 @@
 * Fix typos in README
 * Code tidy
 * Remove all trailing whitespace
+* README code examples tagged as Javascript
