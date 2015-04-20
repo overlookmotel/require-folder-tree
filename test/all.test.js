@@ -115,6 +115,93 @@ describe('options', function() {
 			}
 		});
 	});
+
+	it('uses fileNameTransform option', function() {
+		var tree = requireFolderTree(path, {fileNameTransform: function(n) {return n.toUpperCase();}});
+
+		expect(tree).to.deep.equal({
+			_INDEX: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2
+			},
+			F: 6,
+			G: 7,
+			H: {
+				_INDEX: {
+					k: 11
+				},
+				I: 9,
+				J: 10
+			}
+		});
+	});
+
+	it('uses folderNameTransform option', function() {
+		var tree = requireFolderTree(path, {folderNameTransform: function(n) {return n.toUpperCase();}});
+
+		expect(tree).to.deep.equal({
+			_index: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2
+			},
+			f: 6,
+			g: 7,
+			H: {
+				_index: {
+					k: 11
+				},
+				i: 9,
+				j: 10
+			}
+		});
+	});
+
+	it('uses fileNameTransform option with folderNameTransform override', function() {
+		var tree = requireFolderTree(path, {
+			fileNameTransform: function(n) {return n.toUpperCase();},
+			folderNameTransform: null
+		});
+
+		expect(tree).to.deep.equal({
+			_INDEX: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2
+			},
+			F: 6,
+			G: 7,
+			h: {
+				_INDEX: {
+					k: 11
+				},
+				I: 9,
+				J: 10
+			}
+		});
+	});
 });
 
 describe('flatten option', function() {

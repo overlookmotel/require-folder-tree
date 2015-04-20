@@ -39,6 +39,7 @@
 
 ## Next
 
+* fileNameTransform/folderNameTransform options
 * Fix typos in README
 * Code tidy
 * Remove all trailing whitespace

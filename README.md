@@ -67,6 +67,21 @@ Defaults to `/^([^\.].*)$/` (i.e. process all folders except those beginning wit
 	// Process all folders except those starting with `.` or `_`
 	requireFolderTree('/path/to/folder', { filterFolders: /^([^\._].*)$/ });
 
+### fileNameTransform
+
+Function for transforming object keys for files.
+
+	// Transform file names to lower case
+	requireFolderTree('/path/to/folder', {
+		fileNameTransform: function(str) { return str.toLowerCase(); }
+	});
+
+### folderNameTransform
+
+Like `fileNameTransform`, but for folder names.
+
+By default, inherits value of `options.fileNameTransform`. If you want to define a `fileNameTransform` function but leave folder names unchanged, set `folderNameTransform = null`.
+
 ### flatten
 
 Flattens the folder structure when `true`.
@@ -106,10 +121,10 @@ If set, looks for the named file in each folder, and if found uses it as a base 
 Defaults to `undefined`.
 
 	// if index.js contains code `module.exports = { x: 1 }`:
-	
+
 	requireFolderTree('/path/to/folder');
 	// returns { a: ..., b: ..., c: { d: ..., e: ... }, index: { x: 1 } }
-	
+
 	requireFolderTree('/path/to/folder', { indexFile: 'index.js' });
 	// returns { x: 1, a: ..., b: ..., c: { d: ..., e: ... } }
 
