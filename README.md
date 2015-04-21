@@ -119,7 +119,7 @@ When `true`, camel-cases the keys when concatenating the folder name and file na
 Defaults to `false`
 
 ```js
-requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: true, flattenCamel: true });
+requireFolderTree('/path/to/folder', { flatten: true, flattenCamel: true });
 // returns { a: ..., b: ..., cD: ..., cE: ... }
 ```
 
@@ -129,8 +129,21 @@ Sets separator between folder name and file name when concatenating.
 Defaults to `undefined`.
 
 ```js
-requireFolderTree('/path/to/folder', { flatten: true, flattenPrefix: true, flattenSeparator: '_' });
+requireFolderTree('/path/to/folder', { flatten: true, flattenSeparator: '_' });
 // returns { a: ..., b: ..., c_d: ..., c_e: ... }
+```
+
+### flattenCustom
+
+Sets a custom function for combining folder name and file name when concatenating.
+Defaults to `undefined`.
+
+```js
+requireFolderTree('/path/to/folder', {
+	flatten: true,
+	flattenCustom: function(a, b) { return a + 'x' + b; }
+});
+// returns { a: ..., b: ..., cxd: ..., cxe: ... }
 ```
 
 ### indexFile
