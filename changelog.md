@@ -40,6 +40,7 @@
 ## Next
 
 * fileNameTransform/folderNameTransform options
+* Fix bug in folder loading
 * Fix typos in README
 * Code tidy
 * Travis runs on new container infrastructure
