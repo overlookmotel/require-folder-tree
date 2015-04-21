@@ -37,7 +37,7 @@
 * Code tidy
 * Added `editorconfig` file
 
-## Next
+## 1.1.0
 
 * fileNameTransform/folderNameTransform options
 * Fix bug in folder loading
