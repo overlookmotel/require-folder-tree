@@ -51,7 +51,7 @@
 
 * Move testExample to test/example
 
-## Next
+## 1.2.0
 
 * Update lodash dependency
 * Update dev dependencies
