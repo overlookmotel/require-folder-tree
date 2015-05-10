@@ -47,6 +47,6 @@
 * Remove all trailing whitespace
 * README code examples tagged as Javascript
 
-## Next
+## 1.1.1
 
 * Move testExample to test/example
