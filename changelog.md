@@ -57,6 +57,6 @@
 * Update dev dependencies
 * Add keyword "structure" to package.json
 
-## Next
+## 1.2.1
 
 * Travis runs tests on node 0.10 and 0.12
