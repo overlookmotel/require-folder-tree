@@ -50,3 +50,7 @@
 ## 1.1.1
 
 * Move testExample to test/example
+
+## Next
+
+* Update dev dependencies
