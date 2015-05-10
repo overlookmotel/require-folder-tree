@@ -46,3 +46,7 @@
 * Travis runs on new container infrastructure
 * Remove all trailing whitespace
 * README code examples tagged as Javascript
+
+## Next
+
+* Move testExample to test/example

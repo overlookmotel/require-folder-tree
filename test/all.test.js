@@ -14,7 +14,7 @@ chai.config.includeStack = true;
 
 // tests
 
-var path = pathModule.join(__dirname, '../testExample');
+var path = pathModule.join(__dirname, './example');
 
 describe('default', function() {
 	it('reads whole tree', function() {
