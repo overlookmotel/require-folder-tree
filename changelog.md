@@ -56,3 +56,7 @@
 * Update lodash dependency
 * Update dev dependencies
 * Add keyword "structure" to package.json
+
+## Next
+
+* Travis runs tests on node 0.10 and 0.12
