@@ -54,3 +54,4 @@
 ## Next
 
 * Update dev dependencies
+* Add keyword "structure" to package.json
