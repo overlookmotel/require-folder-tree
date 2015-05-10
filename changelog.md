@@ -53,5 +53,6 @@
 
 ## Next
 
+* Update lodash dependency
 * Update dev dependencies
 * Add keyword "structure" to package.json
