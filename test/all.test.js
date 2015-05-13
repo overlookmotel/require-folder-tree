@@ -14,6 +14,9 @@ chai.config.includeStack = true;
 
 // tests
 
+/* jshint expr: true */
+/* global describe, it */
+
 var path = pathModule.join(__dirname, './example');
 
 describe('default', function() {
@@ -244,8 +247,8 @@ describe('flatten option', function() {
 		expect(tree).to.deep.equal({
 			f: 6,
 			g: 7,
-			h_i: 9,
-			h_j: 10
+			h_i: 9, // jshint ignore:line
+			h_j: 10 // jshint ignore:line
 		});
 	});
 
