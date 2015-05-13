@@ -108,6 +108,22 @@ Like `fileNameAttribute`, but for folder names.
 
 By default, inherits value of `options.fileNameAttribute`. If you want to save file names only, set `options.folderNameAttribute = null`.
 
+### fileParentAttribute
+
+When set, saves the parent folder as an attribute of each `require`-d file.
+If `true`, uses value `'parent'`. Defaults to `undefined`.
+
+```js
+requireFolderTree('/path/to/folder', { fileParentAttribute: true, recurse: false });
+// returns { a: { parent: <reference to root object>, ... }, b: { parent: <reference to root object>, ... } }
+```
+
+### folderParentAttribute
+
+Like `fileParentAttribute`, but for folders.
+
+By default, inherits value of `options.fileParentAttribute`. If you want to save file parents only, set `options.folderParentAttribute = null`.
+
 ### flatten
 
 Flattens the folder structure when `true`.

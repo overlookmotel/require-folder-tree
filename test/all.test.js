@@ -337,6 +337,127 @@ describe('name attribute options', function() {
 	});
 });
 
+
+describe('parent attribute options', function() {
+	it('uses fileParentAttribute option', function() {
+		var tree = requireFolderTree(path, {fileParentAttribute: true});
+
+		expect(tree).to.deep.equal({
+			_index: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2,
+				parent: tree
+			},
+			f: 6,
+			g: 7,
+			h: {
+				_index: {
+					k: 11,
+					parent: tree.h
+				},
+				i: 9,
+				j: 10,
+				parent: tree
+			}
+		});
+	});
+
+	it('uses folderParentAttribute option', function() {
+		var tree = requireFolderTree(path, {folderParentAttribute: true});
+
+		expect(tree).to.deep.equal({
+			_index: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2
+			},
+			f: 6,
+			g: 7,
+			h: {
+				_index: {
+					k: 11
+				},
+				i: 9,
+				j: 10,
+				parent: tree
+			}
+		});
+	});
+
+	it('uses fileParentAttribute option with folderParentAttribute override', function() {
+		var tree = requireFolderTree(path, {fileParentAttribute: true, folderParentAttribute: null});
+
+		expect(tree).to.deep.equal({
+			_index: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2,
+				parent: tree
+			},
+			f: 6,
+			g: 7,
+			h: {
+				_index: {
+					k: 11,
+					parent: tree.h
+				},
+				i: 9,
+				j: 10
+			}
+		});
+	});
+
+	it('uses fileParentAttribute option with flatten', function() {
+		var tree = requireFolderTree(path, {fileParentAttribute: true, flatten: true, flattenPrefix: true});
+
+		expect(tree).to.deep.equal({
+			_index: {
+				_files: {
+					c: 3
+				},
+				_folders: {
+					d: {
+						e: 5
+					}
+				},
+				a: 1,
+				b: 2,
+				parent: tree
+			},
+			f: 6,
+			g: 7,
+			h_index: { // jshint ignore:line
+				k: 11,
+				parent: tree
+			},
+			hi: 9,
+			hj: 10
+		});
+	});
+});
+
 describe('flatten option', function() {
 	it('flattens tree', function() {
 		var tree = requireFolderTree(path, {filterFiles: /^([^_].*)\.js(on)?$/, flatten: true});
