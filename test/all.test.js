@@ -7,6 +7,7 @@
 var chai = require('chai'),
 	expect = chai.expect,
 	pathModule = require('path'),
+	_ = require('lodash'),
 	requireFolderTree = require('../lib/');
 
 // init
@@ -15,9 +16,16 @@ chai.config.includeStack = true;
 // tests
 
 /* jshint expr: true */
-/* global describe, it */
+/* global describe, it, beforeEach */
 
 var path = pathModule.join(__dirname, './example');
+
+// clear require cache of example files before each test
+beforeEach(function() {
+	_.forIn(require.cache, function(obj, key) { // jshint ignore:line
+		if (_.startsWith(key, path)) delete require.cache[key];
+	});
+});
 
 describe('default', function() {
 	it('reads whole tree', function() {
