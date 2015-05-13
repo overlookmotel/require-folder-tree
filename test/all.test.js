@@ -118,7 +118,9 @@ describe('options', function() {
 			}
 		});
 	});
+});
 
+describe('name transform options', function() {
 	it('uses fileNameTransform option', function() {
 		var tree = requireFolderTree(path, {fileNameTransform: function(n) {return n.toUpperCase();}});
 

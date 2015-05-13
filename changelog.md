@@ -64,3 +64,4 @@
 ## Next
 
 * Run jshint on test code
+* Restructure tests
