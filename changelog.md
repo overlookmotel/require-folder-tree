@@ -61,7 +61,7 @@
 
 * Travis runs tests on node 0.10 and 0.12
 
-## Next
+## 1.3.0
 
 * fileNameAttribute/folderNameAttribute options
 * fileParentAttribute/folderParentAttribute options
