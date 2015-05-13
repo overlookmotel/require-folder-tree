@@ -69,6 +69,6 @@
 * Run jshint on test code
 * Restructure tests
 
-## Next
+## 1.3.1
 
 * README contribution section
