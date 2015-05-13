@@ -92,6 +92,22 @@ Like `fileNameTransform`, but for folder names.
 
 By default, inherits value of `options.fileNameTransform`. If you want to define a `fileNameTransform` function but leave folder names unchanged, set `options.folderNameTransform = null`.
 
+### fileNameAttribute
+
+When set, saves the file name (after `fileNameTransform` has been applied) as an attribute of each `require`-d file.
+If `true`, uses value `'name'`. Defaults to `undefined`.
+
+```js
+requireFolderTree('/path/to/folder', { fileNameAttribute: true, recurse: false });
+// returns { a: { name: 'a', ... }, b: { name: 'b', ... } }
+```
+
+### folderNameAttribute
+
+Like `fileNameAttribute`, but for folder names.
+
+By default, inherits value of `options.fileNameAttribute`. If you want to save file names only, set `options.folderNameAttribute = null`.
+
 ### flatten
 
 Flattens the folder structure when `true`.

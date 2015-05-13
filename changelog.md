@@ -63,6 +63,7 @@
 
 ## Next
 
+* fileNameAttribute/folderNameAttribute options
 * Tests clear require cache before each test
 * Run jshint on test code
 * Restructure tests
