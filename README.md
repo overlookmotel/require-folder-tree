@@ -4,8 +4,10 @@
 
 ## Current status
 
-[![Build Status](https://secure.travis-ci.org/overlookmotel/require-folder-tree.png?branch=master)](http://travis-ci.org/overlookmotel/require-folder-tree)
-[![Dependency Status](https://david-dm.org/overlookmotel/require-folder-tree.png)](https://david-dm.org/overlookmotel/require-folder-tree)
+[![NPM version](https://img.shields.io/npm/v/require-folder-tree.svg)](https://www.npmjs.com/package/require-folder-tree)
+[![Build Status](https://img.shields.io/travis/overlookmotel/require-folder-tree/master.svg)](http://travis-ci.org/overlookmotel/require-folder-tree)
+[![Dependency Status](https://img.shields.io/david/overlookmotel/require-folder-tree.svg)](https://david-dm.org/overlookmotel/require-folder-tree)
+[![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/require-folder-tree.svg)](https://david-dm.org/overlookmotel/require-folder-tree)
 
 API is stable and tests cover all options. No known issues.
 
