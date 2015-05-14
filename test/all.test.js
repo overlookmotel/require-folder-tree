@@ -16,7 +16,7 @@ chai.config.includeStack = true;
 // tests
 
 /* jshint expr: true */
-/* global describe, it, beforeEach */
+/* global describe, it, beforeEach, afterEach */
 
 var path = pathModule.join(__dirname, './example');
 
@@ -25,6 +25,21 @@ beforeEach(function() {
 	_.forIn(require.cache, function(obj, key) { // jshint ignore:line
 		if (_.startsWith(key, path)) delete require.cache[key];
 	});
+});
+
+// ensure required files have not been altered
+afterEach(function() {
+	expect(require(pathModule.join(path, '_index'))).to.deep.equal({
+		_files: {c: 3},
+		_folders: {d: {e: 5}},
+		a: 1,
+		b: 2
+	});
+	expect(require(pathModule.join(path, 'f'))).to.deep.equal(6);
+	expect(require(pathModule.join(path, 'g'))).to.deep.equal(7);
+	expect(require(pathModule.join(path, 'h/_index'))).to.deep.equal({k: 11});
+	expect(require(pathModule.join(path, 'h/i'))).to.deep.equal(9);
+	expect(require(pathModule.join(path, 'h/j'))).to.deep.equal(10);
 });
 
 describe('default', function() {

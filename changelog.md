@@ -72,3 +72,7 @@
 ## 1.3.1
 
 * README contribution section
+
+## Next
+
+* Ensure required files are not altered in require cache

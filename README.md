@@ -213,6 +213,11 @@ requireFolderTree('/path/to/folder', { filesKey: 'files' });
 // returns { files: { a: ..., b: ... }, c: { files: { d: ..., e: ... } } }
 ```
 
+## Other usage notes
+
+This module will never alter the contents of the require cache.
+i.e. if you `require()` any of the files again, they will not have been altered by e.g. using `fileNameAttribute` option.
+
 ## Tests
 
 Use `npm test` to run the tests.
