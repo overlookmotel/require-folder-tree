@@ -73,7 +73,7 @@
 
 * README contribution section
 
-## Next
+## 1.4.0
 
 * Ensure required files are not altered in require cache
 * Bug fix: correct behavior when combining `flatten` and `filesKey` options
