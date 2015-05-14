@@ -94,7 +94,7 @@ By default, inherits value of `options.fileNameTransform`. If you want to define
 
 ### fileNameAttribute
 
-When set, saves the file name (after `fileNameTransform` has been applied) as an attribute of each `require`-d file.
+When set, saves the file name (after `fileNameTransform` and `flatten` have been applied) as an attribute of each `require`-d file.
 If `true`, uses value `'name'`. Defaults to `undefined`.
 
 ```js
