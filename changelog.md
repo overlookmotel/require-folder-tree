@@ -76,3 +76,4 @@
 ## Next
 
 * Ensure required files are not altered in require cache
+* Bug fix: correct behavior when combining `flatten` and `filesKey` options
