@@ -79,6 +79,6 @@
 * Bug fix: correct behavior when combining `flatten` and `filesKey` options
 * README update for `fileNameAttribute` option
 
-## Next
+## 1.4.1
 
 * README badges update
