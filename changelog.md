@@ -83,6 +83,6 @@
 
 * README badges update
 
-## Next
+## 1.4.2
 
 * Use lodash for `capitalize` function
