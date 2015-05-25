@@ -223,7 +223,7 @@ i.e. if you `require()` any of the files again, they will not have been altered 
 
 ## Tests
 
-Use `npm test` to run the tests.
+Use `npm test` to run the tests. Use `npm run cover` to check coverage.
 
 ## Changelog
 

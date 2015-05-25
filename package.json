@@ -31,7 +31,8 @@
     "all"
   ],
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "cover": "make cover"
   },
   "engines": {
     "node": ">=0.10.0"
