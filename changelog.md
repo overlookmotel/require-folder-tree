@@ -87,6 +87,6 @@
 
 * Use lodash for `capitalize` function
 
-## Next
+## 1.4.3
 
 * Test code coverage & Travis sends to coveralls
