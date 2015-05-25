@@ -91,6 +91,6 @@
 
 * Test code coverage & Travis sends to coveralls
 
-## Next
+## 1.4.4
 
 * `npm run cover` runs coverage tests
