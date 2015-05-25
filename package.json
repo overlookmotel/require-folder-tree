@@ -19,7 +19,9 @@
   "devDependencies": {
     "mocha": "^2.2.4",
     "chai": "^2.3.0",
-	"jshint": "^2.7.0"
+	"jshint": "^2.7.0",
+    "istanbul": "^0.3.14",
+    "coveralls": "^2.11.2"
   },
   "keywords": [
     "require",

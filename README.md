@@ -8,6 +8,7 @@
 [![Build Status](https://img.shields.io/travis/overlookmotel/require-folder-tree/master.svg)](http://travis-ci.org/overlookmotel/require-folder-tree)
 [![Dependency Status](https://img.shields.io/david/overlookmotel/require-folder-tree.svg)](https://david-dm.org/overlookmotel/require-folder-tree)
 [![Dev dependency Status](https://img.shields.io/david/dev/overlookmotel/require-folder-tree.svg)](https://david-dm.org/overlookmotel/require-folder-tree)
+[![Coverage Status](https://img.shields.io/coveralls/overlookmotel/require-folder-tree/master.svg)](https://coveralls.io/r/overlookmotel/require-folder-tree)
 
 API is stable and tests cover all options. No known issues.
 
