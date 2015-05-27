@@ -95,6 +95,6 @@
 
 * `npm run cover` runs coverage tests
 
-## Next
+## 1.4.5
 
 * Disable Travis dependency cache
