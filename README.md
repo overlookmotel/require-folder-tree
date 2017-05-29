@@ -1,5 +1,7 @@
 # require-folder-tree.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/overlookmotel/require-folder-tree.svg)](https://greenkeeper.io/)
+
 # Utility to require multiple files in a folder tree with flexible options
 
 ## Current status

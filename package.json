@@ -14,13 +14,13 @@
     "url": "https://github.com/overlookmotel/require-folder-tree/issues"
   },
   "dependencies": {
-    "lodash": "3.8.0"
+    "lodash": "4.17.4"
   },
   "devDependencies": {
-    "mocha": "^2.2.4",
-    "chai": "^2.3.0",
+    "mocha": "^3.4.2",
+    "chai": "^4.0.0",
 	"jshint": "^2.7.0",
-    "istanbul": "^0.3.14",
+    "istanbul": "^0.4.5",
     "coveralls": "^2.11.2"
   },
   "keywords": [
