@@ -98,3 +98,8 @@
 ## 1.4.5
 
 * Disable Travis dependency cache
+
+## 1.4.6
+
+* Update lodash dependency
+* Update dev dependencies
