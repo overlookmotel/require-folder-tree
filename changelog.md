@@ -98,3 +98,7 @@
 ## 1.4.5
 
 * Disable Travis dependency cache
+
+## Next
+
+* Travis CI runs tests on Node v6, v8 and v10
