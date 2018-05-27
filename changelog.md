@@ -99,7 +99,7 @@
 
 * Disable Travis dependency cache
 
-## Next
+## 1.4.6
 
 * Travis CI runs tests on Node v6, v8 and v10
 * Update `lodash` dependency

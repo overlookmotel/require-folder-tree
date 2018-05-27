@@ -1,6 +1,6 @@
 {
   "name": "require-folder-tree",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Utility to require multiple files in a folder tree with flexible options",
   "main": "./lib/",
   "author": {
