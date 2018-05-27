@@ -14,7 +14,7 @@
     "url": "https://github.com/overlookmotel/require-folder-tree/issues"
   },
   "dependencies": {
-    "lodash": "3.8.0"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "mocha": "^2.2.4",
