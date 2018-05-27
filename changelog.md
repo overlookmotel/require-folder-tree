@@ -104,3 +104,4 @@
 * Travis CI runs tests on Node v6, v8 and v10
 * Update `lodash` dependency
 * Update dev dependencies
+* Replace makefile with npm scripts
