@@ -40,6 +40,8 @@ afterEach(function() {
 	expect(require(pathModule.join(path, 'h/_index'))).to.deep.equal({k: 11});
 	expect(require(pathModule.join(path, 'h/i'))).to.deep.equal(9);
 	expect(require(pathModule.join(path, 'h/j'))).to.deep.equal(10);
+	expect(require(pathModule.join(path, 'h/l/_index'))).to.deep.equal({m: 12});
+	expect(require(pathModule.join(path, 'h/l/n'))).to.deep.equal(13);
 });
 
 describe('default', function() {
@@ -66,7 +68,13 @@ describe('default', function() {
 					k: 11
 				},
 				i: 9,
-				j: 10
+				j: 10,
+				l: {
+					_index: {
+						m: 12
+					},
+					n: 13
+				}
 			}
 		});
 	});
@@ -81,7 +89,10 @@ describe('filters', function() {
 			g: 7,
 			h: {
 				i: 9,
-				j: 10
+				j: 10,
+				l: {
+					n: 13
+				}
 			}
 		});
 	});
@@ -137,7 +148,11 @@ describe('options', function() {
 			h: {
 				i: 9,
 				j: 10,
-				k: 11
+				k: 11,
+				l: {
+					m: 12,
+					n: 13
+				}
 			}
 		});
 	});
@@ -167,7 +182,13 @@ describe('name transform options', function() {
 					k: 11
 				},
 				I: 9,
-				J: 10
+				J: 10,
+				L: {
+					_INDEX: {
+						m: 12
+					},
+					N: 13
+				}
 			}
 		});
 	});
@@ -195,7 +216,13 @@ describe('name transform options', function() {
 					k: 11
 				},
 				i: 9,
-				j: 10
+				j: 10,
+				L: {
+					_index: {
+						m: 12
+					},
+					n: 13
+				}
 			}
 		});
 	});
@@ -226,7 +253,13 @@ describe('name transform options', function() {
 					k: 11
 				},
 				I: 9,
-				J: 10
+				J: 10,
+				l: {
+					_INDEX: {
+						m: 12
+					},
+					N: 13
+				}
 			}
 		});
 	});
@@ -259,6 +292,14 @@ describe('name attribute options', function() {
 				},
 				i: 9,
 				j: 10,
+				l: {
+					_index: {
+						m: 12,
+						name: '_index'
+					},
+					n: 13,
+					name: 'l'
+				},
 				name: 'h'
 			}
 		});
@@ -288,6 +329,13 @@ describe('name attribute options', function() {
 				},
 				i: 9,
 				j: 10,
+				l: {
+					_index: {
+						m: 12
+					},
+					n: 13,
+					name: 'l'
+				},
 				name: 'h'
 			}
 		});
@@ -318,7 +366,14 @@ describe('name attribute options', function() {
 					name: '_index'
 				},
 				i: 9,
-				j: 10
+				j: 10,
+				l: {
+					_index: {
+						m: 12,
+						name: '_index'
+					},
+					n: 13
+				}
 			}
 		});
 	});
@@ -347,7 +402,12 @@ describe('name attribute options', function() {
 				name: 'h_index'
 			},
 			hi: 9,
-			hj: 10
+			hj: 10,
+			hl_index: { // jshint ignore:line
+				m: 12,
+				name: 'hl_index'
+			},
+			hln: 13
 		});
 	});
 });
@@ -380,6 +440,14 @@ describe('parent attribute options', function() {
 				},
 				i: 9,
 				j: 10,
+				l: {
+					_index: {
+						m: 12,
+						parent: tree.h.l
+					},
+					n: 13,
+					parent: tree.h
+				},
 				parent: tree
 			}
 		});
@@ -409,6 +477,13 @@ describe('parent attribute options', function() {
 				},
 				i: 9,
 				j: 10,
+				l: {
+					_index: {
+						m: 12
+					},
+					n: 13,
+					parent: tree.h
+				},
 				parent: tree
 			}
 		});
@@ -439,7 +514,14 @@ describe('parent attribute options', function() {
 					parent: tree.h
 				},
 				i: 9,
-				j: 10
+				j: 10,
+				l: {
+					_index: {
+						m: 12,
+						parent: tree.h.l
+					},
+					n: 13
+				},
 			}
 		});
 	});
@@ -468,7 +550,12 @@ describe('parent attribute options', function() {
 				parent: tree
 			},
 			hi: 9,
-			hj: 10
+			hj: 10,
+			hl_index: { // jshint ignore:line
+				m: 12,
+				parent: tree
+			},
+			hln: 13
 		});
 	});
 });
@@ -481,7 +568,8 @@ describe('flatten option', function() {
 			f: 6,
 			g: 7,
 			i: 9,
-			j: 10
+			j: 10,
+			n: 13
 		});
 	});
 
@@ -492,7 +580,8 @@ describe('flatten option', function() {
 			f: 6,
 			g: 7,
 			hi: 9,
-			hj: 10
+			hj: 10,
+			hln: 13
 		});
 	});
 
@@ -503,7 +592,8 @@ describe('flatten option', function() {
 			f: 6,
 			g: 7,
 			hI: 9,
-			hJ: 10
+			hJ: 10,
+			hLN: 13
 		});
 	});
 
@@ -514,7 +604,8 @@ describe('flatten option', function() {
 			f: 6,
 			g: 7,
 			h_i: 9, // jshint ignore:line
-			h_j: 10 // jshint ignore:line
+			h_j: 10, // jshint ignore:line
+			h_l_n: 13 // jshint ignore:line
 		});
 	});
 
@@ -525,7 +616,8 @@ describe('flatten option', function() {
 			f: 6,
 			g: 7,
 			hxi: 9,
-			hxj: 10
+			hxj: 10,
+			hxlxn: 13
 		});
 	});
 });
@@ -538,7 +630,12 @@ describe('foldersKey option', function() {
 			_folders: {
 				h: {
 					i: 9,
-					j: 10
+					j: 10,
+					_folders: {
+						l: {
+							n: 13
+						}
+					}
 				}
 			},
 			f: 6,
@@ -560,7 +657,13 @@ describe('foldersKey option', function() {
 				h: {
 					k: 11,
 					i: 9,
-					j: 10
+					j: 10,
+					_folders: {
+						l: {
+							m: 12,
+							n: 13
+						}
+					}
 				}
 			},
 			a: 1,
@@ -584,6 +687,11 @@ describe('filesKey option', function() {
 				_files: {
 					i: 9,
 					j: 10
+				},
+				l: {
+					_files: {
+						n: 13
+					}
 				}
 			}
 		});
@@ -610,6 +718,12 @@ describe('filesKey option', function() {
 				_files: {
 					i: 9,
 					j: 10
+				},
+				l: {
+					m: 12,
+					_files: {
+						n: 13
+					}
 				}
 			}
 		});

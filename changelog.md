@@ -110,5 +110,6 @@
 ## Next
 
 * Fix: Correct capitalization with `flattenCamel` option
+* Tests: Test folder structures 2 deep
 * Update `lodash` dependency
 * Update dev dependencies
