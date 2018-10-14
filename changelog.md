@@ -109,5 +109,6 @@
 
 ## Next
 
+* Fix: Correct capitalization with `flattenCamel` option
 * Update `lodash` dependency
 * Update dev dependencies
