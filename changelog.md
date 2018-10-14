@@ -110,3 +110,4 @@
 ## Next
 
 * Update `lodash` dependency
+* Update dev dependencies
