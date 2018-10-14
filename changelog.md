@@ -106,3 +106,7 @@
 * Update dev dependencies
 * Replace makefile with npm scripts
 * Update license
+
+## Next
+
+* Update `lodash` dependency
