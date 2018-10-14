@@ -107,7 +107,7 @@
 * Replace makefile with npm scripts
 * Update license
 
-## Next
+## 1.4.7
 
 * Fix: Correct capitalization with `flattenCamel` option
 * Tests: Test folder structures 2 deep
